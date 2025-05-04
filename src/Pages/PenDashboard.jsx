@@ -81,7 +81,7 @@ const PenDashboard = () => {
   return (
     <div className="min-h-screen bg-[#0f172a] text-white p-6 space-y-8">
       <h1 className="text-4xl font-bold text-center animate-fade-in">Pen Collection Dashboard</h1>
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2">
         <div className="bg-[#1e293b] rounded-2xl p-4 shadow-lg animate-slide-up">
           <h2 className="text-xl font-semibold mb-2">2 Rupees Pens Breakdown</h2>
           <Bar data={twoRupeesData} options={{ responsive: true }} />

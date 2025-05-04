@@ -43,6 +43,7 @@ const PenPredictionChart = () => {
 
   const options = {
     responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       legend: {
         labels: {
@@ -67,9 +68,11 @@ const PenPredictionChart = () => {
   };
 
   return (
-    <div className="bg-[#1e293b] rounded-2xl p-4 shadow-lg col-span-2 animate-slide-up">
-      <h2 className="text-xl font-semibold mb-2 text-center">Pen Collection Prediction (Next 3 Years)</h2>
-      <Line data={predictionData} options={options} />
+    <div className="bg-[#1e293b] rounded-2xl p-4 shadow-lg animate-slide-up w-full h-[350px] sm:h-[400px] md:h-[450px] lg:h-[500px] overflow-x-auto">
+      <h2 className="text-xl font-semibold mb-2 text-center text-white">Pen Collection Prediction (Next 3 Years)</h2>
+      <div className="w-full h-full min-w-[300px]">
+        <Line data={predictionData} options={options} />
+      </div>
     </div>
   );
 };
